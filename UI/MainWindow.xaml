@@ -6,7 +6,33 @@
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <LinearGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5" />
+                    <SkewTransform CenterX="0.5" CenterY="0.5" />
+                    <RotateTransform Angle="-135" CenterX="0.5" CenterY="0.5" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </LinearGradientBrush.RelativeTransform>
+            <GradientStop Color="#E51C96E4" />
+            <GradientStop Color="#E5E63838" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="/Resources/Images/logo.png"/>
 
     </Grid>
 </Window>
