@@ -173,7 +173,6 @@
                 </Button.Style>
 
                 <DockPanel>
-
                     <Image>
                         <Image.Source>Resources/Images/materials.png</Image.Source>
                         <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
