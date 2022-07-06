@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <LinearGradientBrush.RelativeTransform>
@@ -23,16 +23,80 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Image Source="/Resources/Images/logo.png"/>
+        <DockPanel x:Name="TopPanel" MouseLeftButtonDown="TopPanel_OnMouseLeftButtonDown">
+            <Grid.Row>0</Grid.Row>
+            <Grid.Column>0</Grid.Column>
+            <Grid.ColumnSpan>2</Grid.ColumnSpan>
+            <DockPanel.Background>#FF2C2D2D</DockPanel.Background>
 
+            <TextBlock>
+                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                <TextBlock.Margin>5,2</TextBlock.Margin>
+                <TextBlock.Text>İş Takip</TextBlock.Text>
+                <TextBlock.FontSize>13</TextBlock.FontSize>
+                <TextBlock.FontFamily>Mongolian Baiti</TextBlock.FontFamily>
+            </TextBlock>
+
+            <Rectangle>
+                <Rectangle.Fill>#FFFFFF</Rectangle.Fill>
+                <Rectangle.Width>1</Rectangle.Width>
+                <Rectangle.Height>10</Rectangle.Height>
+            </Rectangle>
+
+            <TextBlock>
+                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                <TextBlock.Margin>7,2,5,2</TextBlock.Margin>
+                <TextBlock.Text>Maliyet Tablosu</TextBlock.Text>
+                <TextBlock.FontSize>11</TextBlock.FontSize>
+            </TextBlock>
+
+            <TextBlock>
+                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                <TextBlock.Margin>5,2</TextBlock.Margin>
+                <TextBlock.Text>Talep Formu</TextBlock.Text>
+                <TextBlock.FontSize>11</TextBlock.FontSize>
+            </TextBlock>
+
+            <TextBlock>
+                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                <TextBlock.Margin>5,2</TextBlock.Margin>
+                <TextBlock.Text>Ayarlar</TextBlock.Text>
+                <TextBlock.FontSize>11</TextBlock.FontSize>
+            </TextBlock>
+
+            <DockPanel>
+                <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>
+
+                <Image x:Name="MinimizeButton" MouseLeftButtonDown="MinimizeButton_OnMouseLeftButtonDown">
+                    <Image.Source>Resources/Images/minimize.png</Image.Source>
+                    <Image.Height>20</Image.Height>
+                    <Image.HorizontalAlignment>Right</Image.HorizontalAlignment>
+                    <Image.Margin>5,0</Image.Margin>
+                </Image>
+
+                <Image x:Name="MaximizeButton" MouseLeftButtonDown="MaximizeButton_OnMouseLeftButtonDown">
+                    <Image.Source>Resources/Images/maximize.png</Image.Source>
+                    <Image.Height>20</Image.Height>
+                    <Image.HorizontalAlignment>Right</Image.HorizontalAlignment>
+                    <Image.Margin>5,0</Image.Margin>
+                </Image>
+
+                <Image x:Name="CloseButton" MouseLeftButtonDown="CloseButton_OnMouseLeftButtonDown">
+                    <Image.Source>Resources/Images/close.png</Image.Source>
+                    <Image.Height>18</Image.Height>
+                    <Image.HorizontalAlignment>Right</Image.HorizontalAlignment>
+                    <Image.Margin>5,0</Image.Margin>
+                </Image>
+            </DockPanel>
+        </DockPanel>
     </Grid>
 </Window>
