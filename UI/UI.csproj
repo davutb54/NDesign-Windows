@@ -9,9 +9,12 @@
 
   <ItemGroup>
     <None Remove="Resources\Images\close.png" />
+    <None Remove="Resources\Images\form.png" />
     <None Remove="Resources\Images\logo.png" />
+    <None Remove="Resources\Images\materials.png" />
     <None Remove="Resources\Images\maximize.png" />
     <None Remove="Resources\Images\minimize.png" />
+    <None Remove="Resources\Images\project.png" />
     <None Remove="Resources\Images\size.png" />
   </ItemGroup>
 
@@ -19,13 +22,22 @@
     <Content Include="Resources\Images\close.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\form.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\materials.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\maximize.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\minimize.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\project.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\size.png">

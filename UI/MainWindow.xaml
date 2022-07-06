@@ -16,20 +16,20 @@
                     <TranslateTransform />
                 </TransformGroup>
             </LinearGradientBrush.RelativeTransform>
-            <GradientStop Color="#E51C96E4" />
-            <GradientStop Color="#E5E63838" Offset="1" />
+            <GradientStop Color="#7F1C96E4" />
+            <GradientStop Color="#B2E63838" Offset="1" />
         </LinearGradientBrush>
     </Window.Background>
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="28" />
-            <RowDefinition Height="*" />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <DockPanel x:Name="TopPanel" MouseLeftButtonDown="TopPanel_OnMouseLeftButtonDown">
@@ -78,6 +78,7 @@
 
                 <Image x:Name="MinimizeButton" MouseLeftButtonDown="MinimizeButton_OnMouseLeftButtonDown">
                     <Image.Source>Resources/Images/minimize.png</Image.Source>
+                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                     <Image.Height>20</Image.Height>
                     <Image.HorizontalAlignment>Right</Image.HorizontalAlignment>
                     <Image.Margin>5,0</Image.Margin>
@@ -85,6 +86,7 @@
 
                 <Image x:Name="MaximizeButton" MouseLeftButtonDown="MaximizeButton_OnMouseLeftButtonDown">
                     <Image.Source>Resources/Images/maximize.png</Image.Source>
+                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                     <Image.Height>20</Image.Height>
                     <Image.HorizontalAlignment>Right</Image.HorizontalAlignment>
                     <Image.Margin>5,0</Image.Margin>
@@ -92,11 +94,125 @@
 
                 <Image x:Name="CloseButton" MouseLeftButtonDown="CloseButton_OnMouseLeftButtonDown">
                     <Image.Source>Resources/Images/close.png</Image.Source>
+                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                     <Image.Height>18</Image.Height>
                     <Image.HorizontalAlignment>Right</Image.HorizontalAlignment>
                     <Image.Margin>5,0</Image.Margin>
                 </Image>
             </DockPanel>
         </DockPanel>
+
+        <StackPanel>
+            <Grid.Row>1</Grid.Row>
+            <Grid.Column>0</Grid.Column>
+
+            <Button>
+                <Button.Background>
+                    <x:Null/>
+                </Button.Background>
+                <Button.Style>
+                    <StaticResource ResourceKey="RightPanelButton"/>
+                </Button.Style>
+
+                <DockPanel>
+
+                    <Ellipse>
+                        <Ellipse.Width>40</Ellipse.Width>
+                        <Ellipse.Height>40</Ellipse.Height>
+                        <Ellipse.Margin>10</Ellipse.Margin>
+                        <Ellipse.Fill>
+                            <ImageBrush>
+                                <ImageBrush.ImageSource>
+                                    <Binding Path="Image"/>
+                                </ImageBrush.ImageSource>
+                            </ImageBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <Binding Path="Username"/>
+                        </TextBlock.Text>
+                        <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                        <TextBlock.Margin>10</TextBlock.Margin>
+                    </TextBlock>
+                </DockPanel>
+            </Button>
+
+            <Button>
+                <Button.Background>
+                    <x:Null/>
+                </Button.Background>
+                <Button.Style>
+                    <StaticResource ResourceKey="RightPanelButton"/>
+                </Button.Style>
+
+                <DockPanel>
+
+                    <Image>
+                        <Image.Source>Resources/Images/project.png</Image.Source>
+                        <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                        <Image.Height>40</Image.Height>
+                        <Image.Margin>10</Image.Margin>
+                    </Image>
+
+                    <TextBlock>
+                        <TextBlock.Text>Proje Ayarları</TextBlock.Text>
+                        <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                        <TextBlock.Margin>10</TextBlock.Margin>
+                    </TextBlock>
+                </DockPanel>
+            </Button>
+
+            <Button>
+                <Button.Background>
+                    <x:Null/>
+                </Button.Background>
+                <Button.Style>
+                    <StaticResource ResourceKey="RightPanelButton"/>
+                </Button.Style>
+
+                <DockPanel>
+
+                    <Image>
+                        <Image.Source>Resources/Images/materials.png</Image.Source>
+                        <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                        <Image.Height>40</Image.Height>
+                        <Image.Margin>10</Image.Margin>
+                    </Image>
+
+                    <TextBlock>
+                        <TextBlock.Text>Malzeme Listesi</TextBlock.Text>
+                        <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                        <TextBlock.Margin>10</TextBlock.Margin>
+                    </TextBlock>
+                </DockPanel>
+            </Button>
+
+            <Button>
+                <Button.Background>
+                    <x:Null/>
+                </Button.Background>
+                <Button.Style>
+                    <StaticResource ResourceKey="RightPanelButton"/>
+                </Button.Style>
+
+                <DockPanel>
+
+                    <Image>
+                        <Image.Source>Resources/Images/form.png</Image.Source>
+                        <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                        <Image.Height>40</Image.Height>
+                        <Image.Margin>10</Image.Margin>
+                    </Image>
+
+                    <TextBlock>
+                        <TextBlock.Text>Talep Formu</TextBlock.Text>
+                        <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                        <TextBlock.Margin>10</TextBlock.Margin>
+                    </TextBlock>
+                </DockPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

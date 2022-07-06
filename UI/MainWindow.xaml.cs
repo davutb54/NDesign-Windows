@@ -20,10 +20,14 @@ namespace UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool _isMaximzed = false;
+        public BitmapImage Image { get; set; } = new BitmapImage(new Uri("C:\\Users\\HİTMACHİNE\\Desktop\\logo.png"));
+        public String Username { get; set; } = "Deneme Sürümü";
+
+        private bool _isMaximized;
 
         public MainWindow()
         {
+            DataContext = this;
             InitializeComponent();
         }
 
@@ -39,17 +43,17 @@ namespace UI
 
         private void MaximizeButton_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (_isMaximzed)
+            if (_isMaximized)
             {
                 WindowState = WindowState.Normal;
                 MaximizeButton.Source = new BitmapImage(new Uri(@"/Resources/Images/maximize.png",UriKind.Relative));
-                _isMaximzed = false;
+                _isMaximized = false;
             }
             else
             {
                 WindowState = WindowState.Maximized;
                 MaximizeButton.Source = new BitmapImage(new Uri(@"/Resources/Images/size.png",UriKind.Relative));
-                _isMaximzed = true;
+                _isMaximized = true;
             }
         }
 
