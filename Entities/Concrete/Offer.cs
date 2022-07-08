@@ -2,7 +2,7 @@
 
 namespace Entities.Concrete;
 
-public class Costs : IEntity
+public class Offer : IEntity
 {
     public int Id { get; set; }
     public string Name { get; set; }

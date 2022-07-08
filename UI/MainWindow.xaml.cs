@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -22,8 +23,8 @@ namespace UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public BitmapImage Image { get; set; } = new BitmapImage(new Uri("C:\\Users\\HİTMACHİNE\\Desktop\\logo.png"));
-        public String Username { get; set; } = "Deneme Sürümü";
+        public BitmapImage Image { get; set; } = new BitmapImage(new Uri(@"C:\Users\HİTMACHİNE\Desktop\logo.png"));
+        public String Username { get; set; } = Environment.UserName;
 
         public bool İsMaximized { get; private set; }
 
@@ -31,6 +32,13 @@ namespace UI
         {
             InitializeComponent();
             DataContext = this;
+
+            if (!System.IO.Directory.Exists($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking"))
+            {
+                System.IO.Directory.CreateDirectory($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking");
+            }
+
+            SQLiteConnection.CreateFile($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db");
         }
 
         private void TopPanel_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
