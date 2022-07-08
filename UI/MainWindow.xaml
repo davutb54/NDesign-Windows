@@ -38,40 +38,151 @@
             <Grid.ColumnSpan>2</Grid.ColumnSpan>
             <DockPanel.Background>#FF2C2D2D</DockPanel.Background>
 
-            <TextBlock>
-                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
-                <TextBlock.Margin>5,2</TextBlock.Margin>
-                <TextBlock.Text>İş Takip</TextBlock.Text>
-                <TextBlock.FontSize>13</TextBlock.FontSize>
-                <TextBlock.FontFamily>Mongolian Baiti</TextBlock.FontFamily>
-            </TextBlock>
+            <Menu>
+                <Menu.Background>
+                    <x:Null/>
+                </Menu.Background>
+                <Menu.VerticalAlignment>Center</Menu.VerticalAlignment>
 
-            <Rectangle>
-                <Rectangle.Fill>#FFFFFF</Rectangle.Fill>
-                <Rectangle.Width>1</Rectangle.Width>
-                <Rectangle.Height>10</Rectangle.Height>
-            </Rectangle>
+                <MenuItem>
+                    <MenuItem.Header>İş Takip</MenuItem.Header>
+                    <MenuItem.FontSize>15</MenuItem.FontSize>
+                    <MenuItem.Foreground>Black</MenuItem.Foreground>
+                    <MenuItem.FontFamily>Mongolian Baiti</MenuItem.FontFamily>
+                </MenuItem>
 
-            <TextBlock>
-                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
-                <TextBlock.Margin>7,2,5,2</TextBlock.Margin>
-                <TextBlock.Text>Maliyet Tablosu</TextBlock.Text>
-                <TextBlock.FontSize>11</TextBlock.FontSize>
-            </TextBlock>
+                <Rectangle>
+                    <Rectangle.Fill>#FFFFFF</Rectangle.Fill>
+                    <Rectangle.Width>1</Rectangle.Width>
+                    <Rectangle.Height>10</Rectangle.Height>
+                </Rectangle>
 
-            <TextBlock>
-                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
-                <TextBlock.Margin>5,2</TextBlock.Margin>
-                <TextBlock.Text>Talep Formu</TextBlock.Text>
-                <TextBlock.FontSize>11</TextBlock.FontSize>
-            </TextBlock>
+                <MenuItem>
+                    <MenuItem.Margin>5,2,3,2</MenuItem.Margin>
+                    <MenuItem.Header>Maliyet Tablosu</MenuItem.Header>
+                    <MenuItem.FontSize>11</MenuItem.FontSize>
+                    <MenuItem.Foreground>Black</MenuItem.Foreground>
 
-            <TextBlock>
-                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
-                <TextBlock.Margin>5,2</TextBlock.Margin>
-                <TextBlock.Text>Ayarlar</TextBlock.Text>
-                <TextBlock.FontSize>11</TextBlock.FontSize>
-            </TextBlock>
+                    <MenuItem>
+                        <MenuItem.Header>Yeni Öğe Ekle</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/add.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Öğeleri Düzenle</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/update.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Öğe Sil</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/delete.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+
+                <MenuItem>
+                    <MenuItem.Margin>3,2</MenuItem.Margin>
+                    <MenuItem.Header>Talep Formu</MenuItem.Header>
+                    <MenuItem.FontSize>11</MenuItem.FontSize>
+                    <MenuItem.Foreground>Black</MenuItem.Foreground>
+
+                    <MenuItem>
+                        <MenuItem.Header>Yeni Öğe Ekle</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/add.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Öğeleri Düzenle</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/update.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Öğe Sil</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/delete.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+
+                <MenuItem>
+                    <MenuItem.Margin>3,2</MenuItem.Margin>
+                    <MenuItem.Header>Ayarlar</MenuItem.Header>
+                    <MenuItem.FontSize>11</MenuItem.FontSize>
+                    <MenuItem.Foreground>Black</MenuItem.Foreground>
+
+                    <MenuItem>
+                        <MenuItem.Header>Temalar</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/themes.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Kayıt Dizini</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/saveFile.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Öneri ve İstekler</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>Resources/Images/suggestion.png</Image.Source>
+                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Hesap Ayarları</MenuItem.Header>
+                        <MenuItem.Icon>
+                            <Ellipse>
+                                <Ellipse.Fill>
+                                    <ImageBrush>
+                                        <ImageBrush.ImageSource>
+                                            <Binding Path="Image"/>
+                                        </ImageBrush.ImageSource>
+                                    </ImageBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
 
             <DockPanel>
                 <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>

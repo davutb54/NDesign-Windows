@@ -8,18 +8,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\add.png" />
     <None Remove="Resources\Images\close.png" />
+    <None Remove="Resources\Images\delete.png" />
     <None Remove="Resources\Images\form.png" />
     <None Remove="Resources\Images\logo.png" />
     <None Remove="Resources\Images\materials.png" />
     <None Remove="Resources\Images\maximize.png" />
     <None Remove="Resources\Images\minimize.png" />
     <None Remove="Resources\Images\project.png" />
+    <None Remove="Resources\Images\savefile.png" />
     <None Remove="Resources\Images\size.png" />
+    <None Remove="Resources\Images\suggestion.png" />
+    <None Remove="Resources\Images\themes.png" />
+    <None Remove="Resources\Images\update.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\Images\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\delete.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\form.png">
@@ -40,7 +52,19 @@
     <Content Include="Resources\Images\project.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\saveFile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\size.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\suggestion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\themes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\update.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
