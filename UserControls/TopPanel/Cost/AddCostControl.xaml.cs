@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 
 namespace UserControls.TopPanel.Cost
 {
@@ -22,27 +23,63 @@ namespace UserControls.TopPanel.Cost
     /// </summary>
     public partial class AddCostControl : UserControl
     {
+
+        private int? _unitId;
         public AddCostControl()
         {
             InitializeComponent();
+
+            EfUnitDal unitDal = new EfUnitDal();
+
+            foreach (Unit unit in unitDal.GetAll())
+            {
+                MenuItem item = new MenuItem
+                {
+                    Header = unit.Name,
+                    Visibility = Visibility.Visible
+                };
+
+                item.Click += (_, _) =>
+                {
+                    UnitMenu.Header = unit.Name;
+                    _unitId = unit.Id;
+                };
+
+                UnitMenu.Items.Add(item);
+            }
         }
 
         private void AddButton_OnClick(object sender, RoutedEventArgs e)
         {
             AddButton.Content = "Enter";
 
-            EfCostDal costDal = new EfCostDal();
-            costDal.Add(new Entities.Concrete.Cost
+            if (string.IsNullOrEmpty(NameText.Text.Trim()))
             {
-                Name = NameText.Text,
-                UnitId = 1,
-                UnitPrice = int.Parse(UnitPriceText.Text.Replace(".",""))
-            });
+                ErrorText.Text = "Lütfen Bir İsim Giriniz";
+            }
+            else if(_unitId == null)
+            {
+                ErrorText.Text = "Lütfen Bir Birim Seçiniz";
+            }
+            else if (string.IsNullOrEmpty(UnitPriceText.Text))
+            {
+                ErrorText.Text = "Lütfen Birim Fiyat Giriniz";
+            }
+            else
+            {
+                EfCostDal costDal = new EfCostDal();
+                costDal.Add(new Entities.Concrete.Cost
+                {
+                    Name = NameText.Text,
+                    UnitId = (int)_unitId,
+                    UnitPrice = double.Parse(UnitPriceText.Text.Replace(".", ""))
+                });
+            }
         }
 
         private void AddCostControl_OnLoaded(object sender, RoutedEventArgs e)
         {
-            var window = Window.GetWindow(this);
+            Window window = Window.GetWindow(this);
             window.KeyDown += WindowOnKeyDown;
         }
 
@@ -95,6 +132,13 @@ namespace UserControls.TopPanel.Cost
                     return;
                 }
             }
+        }
+
+        private void ResetButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Grid grid = (Parent as Grid);
+            grid.Children.Clear();
+            grid.Children.Add(new AddCostControl());
         }
     }
 }

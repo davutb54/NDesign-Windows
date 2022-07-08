@@ -17,12 +17,21 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
-        <StackPanel>
+        <TextBlock x:Name="ErrorText">
             <Grid.Row>0</Grid.Row>
+            <Grid.Column>0</Grid.Column>
+            <TextBlock.HorizontalAlignment>Center</TextBlock.HorizontalAlignment>
+            <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+            <TextBlock.Foreground>#D93D3D</TextBlock.Foreground>
+        </TextBlock>
+
+        <StackPanel>
+            <Grid.Row>1</Grid.Row>
             <Grid.Column>0</Grid.Column>
             <StackPanel.HorizontalAlignment>Center</StackPanel.HorizontalAlignment>
             <StackPanel.VerticalAlignment>Center</StackPanel.VerticalAlignment>
@@ -43,7 +52,6 @@
                     </TextBox.Background>
                     <TextBox.Width>300</TextBox.Width>
                     <TextBox.Margin>10</TextBox.Margin>
-                    <TextBox.TextAlignment>Center</TextBox.TextAlignment>
                     <TextBox.BorderThickness>0,0,0,1</TextBox.BorderThickness>
                 </TextBox>
             </DockPanel>
@@ -58,7 +66,7 @@
                     <TextBlock.Foreground>#2A2B2B</TextBlock.Foreground>
                 </TextBlock>
 
-                <Menu x:Name="UnitMenu">
+                <Menu>
                     <Menu.Background>
                         <x:Null />
                     </Menu.Background>
@@ -66,13 +74,11 @@
                     <Menu.Margin>10</Menu.Margin>
                     <Menu.BorderThickness>0,0,0,1</Menu.BorderThickness>
 
-                    <TextBlock x:Name="UnitText">
-                        <TextBlock.Text>Birim Seçiniz...</TextBlock.Text>
-                        <TextBlock.FontSize>15</TextBlock.FontSize>
-                        <TextBlock.HorizontalAlignment>Center</TextBlock.HorizontalAlignment>
-                        <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
-                        <TextBlock.Foreground>#2A2B2B</TextBlock.Foreground>
-                    </TextBlock>
+                    <MenuItem x:Name="UnitMenu">
+                        <MenuItem.Header>Birim Seçiniz...</MenuItem.Header>
+                        <MenuItem.FontSize>15</MenuItem.FontSize>
+                        <MenuItem.Foreground>#2A2B2B</MenuItem.Foreground>
+                    </MenuItem>
 
                 </Menu>
 
@@ -95,17 +101,16 @@
                     </TextBox.Background>
                     <TextBox.Width>300</TextBox.Width>
                     <TextBox.Margin>10</TextBox.Margin>
-                    <TextBox.TextAlignment>Center</TextBox.TextAlignment>
                     <TextBox.BorderThickness>0,0,0,1</TextBox.BorderThickness>
                 </TextBox>
             </DockPanel>
         </StackPanel>
 
         <DockPanel>
-            <Grid.Row>1</Grid.Row>
+            <Grid.Row>2</Grid.Row>
             <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>
 
-            <Button x:Name="ResetButton" Click="AddButton_OnClick">
+            <Button x:Name="ResetButton" Click="ResetButton_OnClick">
                 <Button.Style>
                     <DynamicResource ResourceKey="ResetButton" />
                 </Button.Style>

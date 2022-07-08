@@ -45,6 +45,7 @@ namespace UI
 
                 List<string> commands = new List<string>();
                 commands.Add("create table if not Exists Costs (Id INTEGER PRIMARY KEY, Name VARCHAR,UnitId INT,UnitPrice DOUBLE)");
+                commands.Add("create table if not exists Units (Id INTEGER PRIMARY KEY ,Name VARCHAR)");
 
                 SQLiteConnection connection = new SQLiteConnection($@"Data Source=C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db");
                 connection.Open();

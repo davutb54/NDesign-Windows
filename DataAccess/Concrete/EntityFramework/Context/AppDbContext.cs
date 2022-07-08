@@ -12,4 +12,5 @@ public class AppDbContext:DbContext
 
     public DbSet<Cost> Costs { get; set; }
     public DbSet<Offer> Offers { get; set; }
+    public DbSet<Unit> Units { get; set; }
 }
