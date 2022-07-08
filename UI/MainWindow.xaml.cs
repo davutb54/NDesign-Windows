@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UserControls.TopPanel.Cost;
 
 namespace UI
 {
@@ -41,14 +42,63 @@ namespace UI
             if (!System.IO.File.Exists($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db"))
             {
                 SQLiteConnection.CreateFile($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db");
-            }
 
+                List<string> commands = new List<string>();
+                commands.Add("create table if not Exists Costs (Id INTEGER PRIMARY KEY, Name VARCHAR,UnitId INT,UnitPrice DOUBLE)");
+
+                SQLiteConnection connection = new SQLiteConnection($@"Data Source=C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db");
+                connection.Open();
+
+                foreach (string command in commands)
+                {
+                    SQLiteCommand cmd = new SQLiteCommand(command, connection);
+                    cmd.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
         }
 
         private void TopPanel_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
+
+        #region Top Panel
+
+        #region App
+
+
+
+        #endregion
+
+        #region Edit
+
+
+
+        #endregion
+
+        #region Data
+
+        #region Cost
+
+        private void AddCost_OnClick(object sender, RoutedEventArgs e)
+        {
+            UserControlGrid.Children.Clear();
+            UserControlGrid.Children.Add(new AddCostControl());
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Settings
+
+
+
+        #endregion
+
+        #region Window Buttons
 
         private void CloseButton_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -60,13 +110,13 @@ namespace UI
             if (İsMaximized)
             {
                 WindowState = WindowState.Normal;
-                MaximizeButton.Source = new BitmapImage(new Uri(@"/Resources/Images/maximize.png",UriKind.Relative));
+                MaximizeButton.Source = new BitmapImage(new Uri(@"/Resources/Images/maximize.png", UriKind.Relative));
                 İsMaximized = false;
             }
             else
             {
                 WindowState = WindowState.Maximized;
-                MaximizeButton.Source = new BitmapImage(new Uri(@"/Resources/Images/size.png",UriKind.Relative));
+                MaximizeButton.Source = new BitmapImage(new Uri(@"/Resources/Images/size.png", UriKind.Relative));
                 İsMaximized = true;
             }
         }
@@ -75,5 +125,11 @@ namespace UI
         {
             WindowState = WindowState.Minimized;
         }
+
+        #endregion
+
+        #endregion
+
+
     }
 }

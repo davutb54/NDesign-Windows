@@ -74,4 +74,8 @@
     <PackageReference Include="System.Data.SQLite" Version="1.0.116" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UserControls\UserControls.csproj" />
+  </ItemGroup>
+
 </Project>

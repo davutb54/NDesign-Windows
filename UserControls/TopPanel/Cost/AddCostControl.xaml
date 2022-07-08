@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="UserControls.TopPanel.Cost.AddCostControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:UserControls.TopPanel.Cost"
+             mc:Ignorable="d"
+             d:DesignHeight="422" d:DesignWidth="600" Loaded="AddCostControl_OnLoaded">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../ResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <Grid.Row>0</Grid.Row>
+            <Grid.Column>0</Grid.Column>
+            <StackPanel.HorizontalAlignment>Center</StackPanel.HorizontalAlignment>
+            <StackPanel.VerticalAlignment>Center</StackPanel.VerticalAlignment>
+
+            <DockPanel>
+                <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>
+
+                <TextBlock>
+                    <TextBlock.Text>İsim</TextBlock.Text>
+                    <TextBlock.FontSize>15</TextBlock.FontSize>
+                    <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                    <TextBlock.Foreground>#2A2B2B</TextBlock.Foreground>
+                </TextBlock>
+
+                <TextBox x:Name="NameText">
+                    <TextBox.Background>
+                        <x:Null />
+                    </TextBox.Background>
+                    <TextBox.Width>300</TextBox.Width>
+                    <TextBox.Margin>10</TextBox.Margin>
+                    <TextBox.TextAlignment>Center</TextBox.TextAlignment>
+                    <TextBox.BorderThickness>0,0,0,1</TextBox.BorderThickness>
+                </TextBox>
+            </DockPanel>
+
+            <DockPanel>
+                <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>
+
+                <TextBlock>
+                    <TextBlock.Text>Birim</TextBlock.Text>
+                    <TextBlock.FontSize>15</TextBlock.FontSize>
+                    <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                    <TextBlock.Foreground>#2A2B2B</TextBlock.Foreground>
+                </TextBlock>
+
+                <Menu x:Name="UnitMenu">
+                    <Menu.Background>
+                        <x:Null />
+                    </Menu.Background>
+                    <Menu.Width>300</Menu.Width>
+                    <Menu.Margin>10</Menu.Margin>
+                    <Menu.BorderThickness>0,0,0,1</Menu.BorderThickness>
+
+                    <TextBlock x:Name="UnitText">
+                        <TextBlock.Text>Birim Seçiniz...</TextBlock.Text>
+                        <TextBlock.FontSize>15</TextBlock.FontSize>
+                        <TextBlock.HorizontalAlignment>Center</TextBlock.HorizontalAlignment>
+                        <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                        <TextBlock.Foreground>#2A2B2B</TextBlock.Foreground>
+                    </TextBlock>
+
+                </Menu>
+
+            </DockPanel>
+
+            <DockPanel>
+                <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>
+
+                <TextBlock>
+                    <TextBlock.Text>Birim Fiyat</TextBlock.Text>
+                    <TextBlock.FontSize>15</TextBlock.FontSize>
+                    <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                    <TextBlock.Foreground>#2A2B2B</TextBlock.Foreground>
+                </TextBlock>
+
+                <TextBox x:Name="UnitPriceText" PreviewTextInput="UnitPriceText_OnPreviewTextInput"
+                         TextChanged="UnitPriceText_OnTextChanged">
+                    <TextBox.Background>
+                        <x:Null />
+                    </TextBox.Background>
+                    <TextBox.Width>300</TextBox.Width>
+                    <TextBox.Margin>10</TextBox.Margin>
+                    <TextBox.TextAlignment>Center</TextBox.TextAlignment>
+                    <TextBox.BorderThickness>0,0,0,1</TextBox.BorderThickness>
+                </TextBox>
+            </DockPanel>
+        </StackPanel>
+
+        <DockPanel>
+            <Grid.Row>1</Grid.Row>
+            <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>
+
+            <Button x:Name="ResetButton" Click="AddButton_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="ResetButton" />
+                </Button.Style>
+                <Button.Margin>10</Button.Margin>
+            </Button>
+
+            <Button x:Name="AddButton" Click="AddButton_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="AddButton" />
+                </Button.Style>
+                <Button.Margin>10,10,30,10</Button.Margin>
+            </Button>
+        </DockPanel>
+    </Grid>
+</UserControl>

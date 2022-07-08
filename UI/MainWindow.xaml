@@ -156,7 +156,7 @@
                         <MenuItem.Header>Maliyetler</MenuItem.Header>
                         <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
 
-                        <MenuItem>
+                        <MenuItem x:Name="AddCost" Click="AddCost_OnClick">
                             <MenuItem.Header>Ekle</MenuItem.Header>
                             <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                             <MenuItem.Icon>
@@ -427,7 +427,7 @@
                     <x:Null/>
                 </Button.Background>
                 <Button.Style>
-                    <StaticResource ResourceKey="RightPanelButton"/>
+                    <DynamicResource ResourceKey="RightPanelButton"/>
                 </Button.Style>
 
                 <DockPanel>
@@ -460,7 +460,7 @@
                     <x:Null/>
                 </Button.Background>
                 <Button.Style>
-                    <StaticResource ResourceKey="RightPanelButton"/>
+                    <DynamicResource ResourceKey="RightPanelButton"/>
                 </Button.Style>
 
                 <DockPanel>
@@ -485,7 +485,7 @@
                     <x:Null/>
                 </Button.Background>
                 <Button.Style>
-                    <StaticResource ResourceKey="RightPanelButton"/>
+                    <DynamicResource ResourceKey="RightPanelButton"/>
                 </Button.Style>
 
                 <DockPanel>
@@ -509,7 +509,7 @@
                     <x:Null/>
                 </Button.Background>
                 <Button.Style>
-                    <StaticResource ResourceKey="RightPanelButton"/>
+                    <DynamicResource ResourceKey="RightPanelButton"/>
                 </Button.Style>
 
                 <DockPanel>
@@ -529,5 +529,10 @@
                 </DockPanel>
             </Button>
         </StackPanel>
+
+        <Grid x:Name="UserControlGrid">
+            <Grid.Row>1</Grid.Row>
+            <Grid.Column>1</Grid.Column>
+        </Grid>
     </Grid>
 </Window>
