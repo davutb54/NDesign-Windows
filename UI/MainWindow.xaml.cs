@@ -38,7 +38,11 @@ namespace UI
                 System.IO.Directory.CreateDirectory($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking");
             }
 
-            SQLiteConnection.CreateFile($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db");
+            if (!System.IO.File.Exists($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db"))
+            {
+                SQLiteConnection.CreateFile($@"C:\Users\{Environment.UserName}\AppData\Roaming\JobTracking\app.db");
+            }
+
         }
 
         private void TopPanel_OnMouseLeftButtonDown(object sender, MouseButtonEventArgs e)

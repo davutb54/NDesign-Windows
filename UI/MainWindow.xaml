@@ -47,8 +47,57 @@
                 <MenuItem>
                     <MenuItem.Header>İş Takip</MenuItem.Header>
                     <MenuItem.FontSize>15</MenuItem.FontSize>
-                    <MenuItem.Foreground>Black</MenuItem.Foreground>
+                    <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                     <MenuItem.FontFamily>Mongolian Baiti</MenuItem.FontFamily>
+
+                    <MenuItem>
+                        <MenuItem.Command>New</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Command>Open</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Command>Close</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <Separator/>
+
+                    <MenuItem>
+                        <MenuItem.Command>Save</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Command>SaveAs</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+                    
+                    <Separator/>
+
+                    <MenuItem>
+                        <MenuItem.Command>Help</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <Separator/>
+
+                    <MenuItem>
+                        <MenuItem.Command>FirstPage</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <Separator/>
+
+                    <MenuItem>
+                        <MenuItem.Command>Print</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
                 </MenuItem>
 
                 <Rectangle>
@@ -59,86 +108,233 @@
 
                 <MenuItem>
                     <MenuItem.Margin>5,2,3,2</MenuItem.Margin>
-                    <MenuItem.Header>Maliyet Tablosu</MenuItem.Header>
+                    <MenuItem.Header>Düzenle</MenuItem.Header>
                     <MenuItem.FontSize>11</MenuItem.FontSize>
-                    <MenuItem.Foreground>Black</MenuItem.Foreground>
+                    <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
 
                     <MenuItem>
-                        <MenuItem.Header>Yeni Öğe Ekle</MenuItem.Header>
-                        <MenuItem.Icon>
-                            <Image>
-                                <Image.Source>Resources/Images/add.png</Image.Source>
-                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                            </Image>
-                        </MenuItem.Icon>
+                        <MenuItem.Command>Undo</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                     </MenuItem>
 
                     <MenuItem>
-                        <MenuItem.Header>Öğeleri Düzenle</MenuItem.Header>
-                        <MenuItem.Icon>
-                            <Image>
-                                <Image.Source>Resources/Images/update.png</Image.Source>
-                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                            </Image>
-                        </MenuItem.Icon>
+                        <MenuItem.Command>Redo</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <Separator/>
+
+                    <MenuItem>
+                        <MenuItem.Command>Cut</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                     </MenuItem>
 
                     <MenuItem>
-                        <MenuItem.Header>Öğe Sil</MenuItem.Header>
-                        <MenuItem.Icon>
-                            <Image>
-                                <Image.Source>Resources/Images/delete.png</Image.Source>
-                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                            </Image>
-                        </MenuItem.Icon>
+                        <MenuItem.Command>Copy</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                     </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Command>Paste</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Command>Delete</MenuItem.Command>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                    </MenuItem>
+
                 </MenuItem>
 
                 <MenuItem>
                     <MenuItem.Margin>3,2</MenuItem.Margin>
-                    <MenuItem.Header>Talep Formu</MenuItem.Header>
+                    <MenuItem.Header>Veriler</MenuItem.Header>
                     <MenuItem.FontSize>11</MenuItem.FontSize>
-                    <MenuItem.Foreground>Black</MenuItem.Foreground>
+                    <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
 
                     <MenuItem>
-                        <MenuItem.Header>Yeni Öğe Ekle</MenuItem.Header>
-                        <MenuItem.Icon>
-                            <Image>
-                                <Image.Source>Resources/Images/add.png</Image.Source>
-                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                            </Image>
-                        </MenuItem.Icon>
+                        <MenuItem.Header>Maliyetler</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+
+                        <MenuItem>
+                            <MenuItem.Header>Ekle</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/add.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>Güncelle</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/update.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </MenuItem>
 
                     <MenuItem>
-                        <MenuItem.Header>Öğeleri Düzenle</MenuItem.Header>
-                        <MenuItem.Icon>
-                            <Image>
-                                <Image.Source>Resources/Images/update.png</Image.Source>
-                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                            </Image>
-                        </MenuItem.Icon>
+                        <MenuItem.Header>Teklifler</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+
+                        <MenuItem>
+                            <MenuItem.Header>Ekle</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/add.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>Güncelle</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/update.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+
+
+                    <Separator/>
+
+                    <MenuItem>
+                        <MenuItem.Header>Türler</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+
+                        <MenuItem>
+                            <MenuItem.Header>Ekle</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/add.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </MenuItem>
 
                     <MenuItem>
-                        <MenuItem.Header>Öğe Sil</MenuItem.Header>
-                        <MenuItem.Icon>
-                            <Image>
-                                <Image.Source>Resources/Images/delete.png</Image.Source>
-                                <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                            </Image>
-                        </MenuItem.Icon>
+                        <MenuItem.Header>Yerler</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+
+                        <MenuItem>
+                            <MenuItem.Header>Ekle</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/add.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
                     </MenuItem>
+
+                    <MenuItem>
+                        <MenuItem.Header>Birimler</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+
+                        <MenuItem>
+                            <MenuItem.Header>Ekle</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/add.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+
+                        <MenuItem>
+                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                            <MenuItem.Icon>
+                                <Image>
+                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
+                                </Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+
+                    <Separator/>
+
+                    <MenuItem>
+                        <MenuItem.Header>Sabitler</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+
+                        <MenuItem>
+                            <MenuItem.Header>KDV Oranı</MenuItem.Header>
+                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
+                        </MenuItem>
+                    </MenuItem>
+
                 </MenuItem>
 
                 <MenuItem>
                     <MenuItem.Margin>3,2</MenuItem.Margin>
                     <MenuItem.Header>Ayarlar</MenuItem.Header>
                     <MenuItem.FontSize>11</MenuItem.FontSize>
-                    <MenuItem.Foreground>Black</MenuItem.Foreground>
+                    <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
 
                     <MenuItem>
                         <MenuItem.Header>Temalar</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                         <MenuItem.Icon>
                             <Image>
                                 <Image.Source>Resources/Images/themes.png</Image.Source>
@@ -147,8 +343,11 @@
                         </MenuItem.Icon>
                     </MenuItem>
 
+                    <Separator/>
+
                     <MenuItem>
                         <MenuItem.Header>Kayıt Dizini</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                         <MenuItem.Icon>
                             <Image>
                                 <Image.Source>Resources/Images/saveFile.png</Image.Source>
@@ -156,9 +355,12 @@
                             </Image>
                         </MenuItem.Icon>
                     </MenuItem>
+                    
+                    <Separator/>
 
                     <MenuItem>
                         <MenuItem.Header>Öneri ve İstekler</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                         <MenuItem.Icon>
                             <Image>
                                 <Image.Source>Resources/Images/suggestion.png</Image.Source>
@@ -167,8 +369,11 @@
                         </MenuItem.Icon>
                     </MenuItem>
 
+                    <Separator/>
+
                     <MenuItem>
                         <MenuItem.Header>Hesap Ayarları</MenuItem.Header>
+                        <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                         <MenuItem.Icon>
                             <Ellipse>
                                 <Ellipse.Fill>
