@@ -23,7 +23,6 @@ namespace UserControls.TopPanel.Cost
     /// </summary>
     public partial class AddCostControl : UserControl
     {
-
         private int? _unitId;
         public AddCostControl()
         {
@@ -51,8 +50,6 @@ namespace UserControls.TopPanel.Cost
 
         private void AddButton_OnClick(object sender, RoutedEventArgs e)
         {
-            AddButton.Content = "Enter";
-
             if (string.IsNullOrEmpty(NameText.Text.Trim()))
             {
                 ErrorText.Text = "Lütfen Bir İsim Giriniz";
@@ -74,6 +71,10 @@ namespace UserControls.TopPanel.Cost
                     UnitId = (int)_unitId,
                     UnitPrice = double.Parse(UnitPriceText.Text.Replace(".", ""))
                 });
+
+                Grid parent = Parent as Grid;
+                parent.Children.Clear();
+                parent.Children.Add(new AddCostControl());
             }
         }
 
