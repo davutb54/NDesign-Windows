@@ -168,22 +168,11 @@
                         </MenuItem>
 
                         <MenuItem>
-                            <MenuItem.Header>Güncelle</MenuItem.Header>
+                            <MenuItem.Header>Listele</MenuItem.Header>
                             <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                             <MenuItem.Icon>
                                 <Image>
-                                    <Image.Source>Resources/Images/update.png</Image.Source>
-                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                                </Image>
-                            </MenuItem.Icon>
-                        </MenuItem>
-
-                        <MenuItem>
-                            <MenuItem.Header>Sil</MenuItem.Header>
-                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
-                            <MenuItem.Icon>
-                                <Image>
-                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <Image.Source>Resources/Images/list.png</Image.Source>
                                     <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                                 </Image>
                             </MenuItem.Icon>
@@ -206,22 +195,11 @@
                         </MenuItem>
 
                         <MenuItem>
-                            <MenuItem.Header>Güncelle</MenuItem.Header>
+                            <MenuItem.Header>Listele</MenuItem.Header>
                             <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                             <MenuItem.Icon>
                                 <Image>
-                                    <Image.Source>Resources/Images/update.png</Image.Source>
-                                    <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
-                                </Image>
-                            </MenuItem.Icon>
-                        </MenuItem>
-
-                        <MenuItem>
-                            <MenuItem.Header>Sil</MenuItem.Header>
-                            <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
-                            <MenuItem.Icon>
-                                <Image>
-                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <Image.Source>Resources/Images/list.png</Image.Source>
                                     <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                                 </Image>
                             </MenuItem.Icon>
@@ -247,11 +225,11 @@
                         </MenuItem>
 
                         <MenuItem>
-                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Header>Listele</MenuItem.Header>
                             <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                             <MenuItem.Icon>
                                 <Image>
-                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <Image.Source>Resources/Images/list.png</Image.Source>
                                     <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                                 </Image>
                             </MenuItem.Icon>
@@ -274,11 +252,11 @@
                         </MenuItem>
 
                         <MenuItem>
-                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Header>Listele</MenuItem.Header>
                             <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                             <MenuItem.Icon>
                                 <Image>
-                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <Image.Source>Resources/Images/list.png</Image.Source>
                                     <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                                 </Image>
                             </MenuItem.Icon>
@@ -301,11 +279,11 @@
                         </MenuItem>
 
                         <MenuItem>
-                            <MenuItem.Header>Sil</MenuItem.Header>
+                            <MenuItem.Header>Listele</MenuItem.Header>
                             <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                             <MenuItem.Icon>
                                 <Image>
-                                    <Image.Source>Resources/Images/delete.png</Image.Source>
+                                    <Image.Source>Resources/Images/list.png</Image.Source>
                                     <RenderOptions.BitmapScalingMode>HighQuality</RenderOptions.BitmapScalingMode>
                                 </Image>
                             </MenuItem.Icon>

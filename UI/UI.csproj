@@ -12,6 +12,7 @@
     <None Remove="Resources\Images\close.png" />
     <None Remove="Resources\Images\delete.png" />
     <None Remove="Resources\Images\form.png" />
+    <None Remove="Resources\Images\list.png" />
     <None Remove="Resources\Images\logo.png" />
     <None Remove="Resources\Images\materials.png" />
     <None Remove="Resources\Images\maximize.png" />
@@ -21,7 +22,6 @@
     <None Remove="Resources\Images\size.png" />
     <None Remove="Resources\Images\suggestion.png" />
     <None Remove="Resources\Images\themes.png" />
-    <None Remove="Resources\Images\update.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -64,7 +64,7 @@
     <Content Include="Resources\Images\themes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\update.png">
+    <Content Include="Resources\Images\list.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
