@@ -1,6 +1,9 @@
-﻿namespace DataAccess.Abstract;
+﻿using Core.DataAccess;
+using Entities.Concrete;
 
-public interface IOfferDal
+namespace DataAccess.Abstract;
+
+public interface IOfferDal:IEntityRepository<Offer>
 {
     
 }

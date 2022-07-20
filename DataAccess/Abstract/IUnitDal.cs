@@ -1,6 +1,9 @@
-﻿namespace DataAccess.Abstract;
+﻿using Core.DataAccess;
+using Entities.Concrete;
 
-public interface IUnitDal
+namespace DataAccess.Abstract;
+
+public interface IUnitDal:IEntityRepository<Unit>
 {
     
 }

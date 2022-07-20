@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 
@@ -64,7 +65,7 @@ namespace UserControls.TopPanel.Cost
             }
             else
             {
-                EfCostDal costDal = new EfCostDal();
+                ICostDal costDal = new EfCostDal();
                 costDal.Add(new Entities.Concrete.Cost
                 {
                     Name = NameText.Text,

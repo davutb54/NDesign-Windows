@@ -1,6 +1,9 @@
-﻿namespace DataAccess.Abstract;
+﻿using Core.DataAccess;
+using Entities.Concrete;
 
-public interface ICostDal
+namespace DataAccess.Abstract;
+
+public interface ICostDal : IEntityRepository<Cost>
 {
     
 }
