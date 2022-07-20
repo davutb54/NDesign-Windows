@@ -89,6 +89,12 @@ namespace UI
             UserControlGrid.Children.Add(new AddCostControl());
         }
 
+        private void ListCost_OnClick(object sender, RoutedEventArgs e)
+        {
+            UserControlGrid.Children.Clear();
+            UserControlGrid.Children.Add(new ListCostControl());
+        }
+
         #endregion
 
         #endregion
@@ -130,7 +136,6 @@ namespace UI
         #endregion
 
         #endregion
-
 
     }
 }

@@ -167,7 +167,7 @@
                             </MenuItem.Icon>
                         </MenuItem>
 
-                        <MenuItem>
+                        <MenuItem x:Name="ListCost" Click="ListCost_OnClick">
                             <MenuItem.Header>Listele</MenuItem.Header>
                             <MenuItem.Foreground>#6E6565</MenuItem.Foreground>
                             <MenuItem.Icon>

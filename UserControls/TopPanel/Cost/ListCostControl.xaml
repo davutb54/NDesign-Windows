@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UserControls.TopPanel.Cost"
              mc:Ignorable="d" 
-             d:DesignHeight="422" d:DesignWidth="600">
+             d:DesignHeight="422" d:DesignWidth="600" Loaded="ListCostControl_OnLoaded">
 
     <UserControl.Resources>
         <ResourceDictionary>
@@ -16,22 +16,33 @@
     </UserControl.Resources>
 
     <Grid>
-        <DataGrid>
+        <DataGrid x:Name="DataGrid">
+            <DataGrid.Background>
+                <x:Null/>
+            </DataGrid.Background>
+            <DataGrid.AutoGenerateColumns>False</DataGrid.AutoGenerateColumns>
+            <DataGrid.BorderThickness>0</DataGrid.BorderThickness>
+            <DataGrid.HorizontalAlignment>Center</DataGrid.HorizontalAlignment>
+
             <DataGrid.Columns>
                 <DataGridTextColumn>
                     <DataGridTextColumn.Header>İş İsmi</DataGridTextColumn.Header>
-                    <DataGridTextColumn.Binding><Binding ></Binding></DataGridTextColumn.Binding>
+                    <DataGridTextColumn.Binding>
+                        <Binding Path="Name"/>
+                    </DataGridTextColumn.Binding>
                 </DataGridTextColumn>
+
                 <DataGridTextColumn>
                     <DataGridTextColumn.Header>Birim</DataGridTextColumn.Header>
                     <DataGridTextColumn.Binding>
-                        <Binding ></Binding>
+                        <Binding Path="UnitId"></Binding>
                     </DataGridTextColumn.Binding>
                 </DataGridTextColumn>
+
                 <DataGridTextColumn>
                     <DataGridTextColumn.Header>Birim Fiyat</DataGridTextColumn.Header>
                     <DataGridTextColumn.Binding>
-                        <Binding ></Binding>
+                        <Binding Path="UnitPrice"></Binding>
                     </DataGridTextColumn.Binding>
                 </DataGridTextColumn>
             </DataGrid.Columns>

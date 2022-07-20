@@ -29,9 +29,26 @@ namespace UserControls.TopPanel.Cost
             InitializeComponent();
         }
 
-        private void GetData()
+        private List<Entities.Concrete.Cost> GetData()
         {
+            List<Entities.Concrete.Cost> data = _costDal.GetAll();
 
+            var query = from cost in data
+                        select new Entities.Concrete.Cost
+                        {
+                            Id = cost.Id,
+                            Name = cost.Name,
+                            UnitId = cost.UnitId,
+                            UnitPrice = cost.UnitPrice
+                        };
+
+            return query.ToList();
+
+        }
+
+        private void ListCostControl_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            DataGrid.ItemsSource = GetData();
         }
     }
 }
