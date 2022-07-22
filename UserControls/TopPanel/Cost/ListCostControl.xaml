@@ -16,54 +16,156 @@
     </UserControl.Resources>
 
     <Grid>
-        <DataGrid x:Name="DataGrid">
-            <DataGrid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel>
+            <Grid.Row>0</Grid.Row>
+            <DockPanel.HorizontalAlignment>Center</DockPanel.HorizontalAlignment>
+            <DockPanel.VerticalAlignment>Center</DockPanel.VerticalAlignment>
+
+            <TextBlock>
+                <TextBlock.Text>Sıralama Ölçütü</TextBlock.Text>
+                <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                <TextBlock.FontSize>12</TextBlock.FontSize>
+                <TextBlock.Margin>10</TextBlock.Margin>
+                <TextBlock.Foreground>#32BCCD7F</TextBlock.Foreground>
+            </TextBlock>
+
+            <Button x:Name="NumberList" Click="NumberList_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="ListButton" />
+                </Button.Style>
+                <Button.Margin>10</Button.Margin>
+                <Button.Content>Varsayılan</Button.Content>
+            </Button>
+
+            <Button x:Name="NameList" Click="NameList_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="ListButton" />
+                </Button.Style>
+                <Button.Margin>10</Button.Margin>
+                <Button.Content>İsim</Button.Content>
+            </Button>
+
+            <Button x:Name="UnitList" Click="UnitList_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="ListButton" />
+                </Button.Style>
+                <Button.Margin>10</Button.Margin>
+                <Button.Content>Birim</Button.Content>
+            </Button>
+
+            <Button x:Name="UnitPriceList" Click="UnitPriceList_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="ListButton" />
+                </Button.Style>
+                <Button.Margin>10</Button.Margin>
+                <Button.Content>Birim Fiyat</Button.Content>
+            </Button>
+        </DockPanel>
+
+        <ListView x:Name="ListView">
+            <Grid.Row>1</Grid.Row>
+            <ListView.VerticalAlignment>Center</ListView.VerticalAlignment> 
+            <ListView.BorderThickness>0</ListView.BorderThickness>
+            <ScrollViewer.VerticalScrollBarVisibility>Disabled</ScrollViewer.VerticalScrollBarVisibility>
+            <ListView.Background>
                 <x:Null/>
-            </DataGrid.Background>
-            <DataGrid.AutoGenerateColumns>False</DataGrid.AutoGenerateColumns>
-            <DataGrid.BorderThickness>0</DataGrid.BorderThickness>
-            <DataGrid.HorizontalAlignment>Center</DataGrid.HorizontalAlignment>
+            </ListView.Background>
 
-            <DataGrid.Columns>
-                <DataGridTextColumn>
-                    <DataGridTextColumn.Header>İş İsmi</DataGridTextColumn.Header>
-                    <DataGridTextColumn.Binding>
-                        <Binding Path="Name"/>
-                    </DataGridTextColumn.Binding>
-                </DataGridTextColumn>
+            <Grid>
+                <Grid.Width>588</Grid.Width>
+                <Grid.Height>38</Grid.Height>
 
-                <DataGridTextColumn>
-                    <DataGridTextColumn.Header>Birim</DataGridTextColumn.Header>
-                    <DataGridTextColumn.Binding>
-                        <Binding Path="UnitId"></Binding>
-                    </DataGridTextColumn.Binding>
-                </DataGridTextColumn>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
 
-                <DataGridTextColumn>
-                    <DataGridTextColumn.Header>Birim Fiyat</DataGridTextColumn.Header>
-                    <DataGridTextColumn.Binding>
-                        <Binding Path="UnitPrice"></Binding>
-                    </DataGridTextColumn.Binding>
-                </DataGridTextColumn>
-            </DataGrid.Columns>
+                <TextBlock>
+                    <Grid.Column>0</Grid.Column>
+                    <TextBlock.Text>2150</TextBlock.Text>
+                    <TextBlock.TextAlignment>Center</TextBlock.TextAlignment>
+                    <TextBlock.FontSize>11</TextBlock.FontSize>
+                    <TextBlock.HorizontalAlignment>Center</TextBlock.HorizontalAlignment>
+                    <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                </TextBlock>
 
-            <DataGrid.RowDetailsTemplate>
-                <DataTemplate>
-                    <DockPanel>
-                        <Button>
-                            <Button.Style>
-                                <DynamicResource ResourceKey="AddButton" />
-                            </Button.Style>
-                        </Button>
+                <TextBlock>
+                    <Grid.Column>1</Grid.Column>
+                    <TextBlock.Text>Deneme Malzemesi Uzun 123DFFDDFFDFDFDFFDFDFDFDFD</TextBlock.Text>
+                    <TextBlock.FontSize>13</TextBlock.FontSize>
+                    <TextBlock.TextAlignment>Left</TextBlock.TextAlignment>
+                    <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                    <TextBlock.Margin>10,0</TextBlock.Margin>
+                </TextBlock>
 
-                        <Button>
-                            <Button.Style>
-                                <DynamicResource ResourceKey="AddButton" />
-                            </Button.Style>
-                        </Button>
-                    </DockPanel>
-                </DataTemplate>
-            </DataGrid.RowDetailsTemplate>
-        </DataGrid>
+                <TextBlock>
+                    <Grid.Column>2</Grid.Column>
+                    <TextBlock.Text>Adet</TextBlock.Text>
+                    <TextBlock.FontSize>14</TextBlock.FontSize>
+                    <TextBlock.TextAlignment>Center</TextBlock.TextAlignment>
+                    <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                    <TextBlock.HorizontalAlignment>Center</TextBlock.HorizontalAlignment>
+                </TextBlock>
+
+                <TextBlock>
+                    <Grid.Column>3</Grid.Column>
+                    <TextBlock.Text>10.250.600,00</TextBlock.Text>
+                    <TextBlock.FontSize>13</TextBlock.FontSize>
+                    <TextBlock.TextAlignment>Center</TextBlock.TextAlignment>
+                    <TextBlock.HorizontalAlignment>Center</TextBlock.HorizontalAlignment>
+                    <TextBlock.VerticalAlignment>Center</TextBlock.VerticalAlignment>
+                </TextBlock>
+
+                <StackPanel>
+                    <Grid.Column>4</Grid.Column>
+                    <StackPanel.HorizontalAlignment>Center</StackPanel.HorizontalAlignment>
+
+                    <Button>
+                        <Button.Style>
+                            <DynamicResource ResourceKey="DeleteButton" />
+                        </Button.Style>
+                        <Button.Margin>0,1</Button.Margin>
+                    </Button>
+
+                    <Button>
+                        <Button.Style>
+                            <DynamicResource ResourceKey="UpdateButton" />
+                        </Button.Style>
+                        <Button.Margin>0,1</Button.Margin>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </ListView>
+
+        <DockPanel>
+            <Grid.Row>2</Grid.Row>
+            <DockPanel.Width>600</DockPanel.Width>
+            <DockPanel.HorizontalAlignment>Right</DockPanel.HorizontalAlignment>
+
+            <Button x:Name="RefreshButton" Click="RefreshButton_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="RefreshButton" />
+                </Button.Style>
+                <Button.Margin>10</Button.Margin>
+                <Button.HorizontalAlignment>Left</Button.HorizontalAlignment>
+            </Button>
+
+            <Button x:Name="AddButton" Click="AddButton_OnClick">
+                <Button.Style>
+                    <DynamicResource ResourceKey="AddButton" />
+                </Button.Style>
+                <Button.Margin>10</Button.Margin>
+                <Button.HorizontalAlignment>Right</Button.HorizontalAlignment>
+            </Button>
+        </DockPanel>
     </Grid>
 </UserControl>

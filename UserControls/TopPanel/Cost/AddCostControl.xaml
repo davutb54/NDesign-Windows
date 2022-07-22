@@ -79,7 +79,6 @@
                         <MenuItem.FontSize>15</MenuItem.FontSize>
                         <MenuItem.Foreground>#2A2B2B</MenuItem.Foreground>
                     </MenuItem>
-
                 </Menu>
 
             </DockPanel>
