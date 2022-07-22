@@ -24,6 +24,8 @@ namespace UserControls.TopPanel.Cost
     /// </summary>
     public partial class AddCostControl : UserControl
     {
+        private ICostDal _costDal = new EfCostDal();
+
         private int? _unitId;
         public AddCostControl()
         {
@@ -55,7 +57,7 @@ namespace UserControls.TopPanel.Cost
             {
                 ErrorText.Text = "Lütfen Bir İsim Giriniz";
             }
-            else if(_unitId == null)
+            else if (_unitId == null)
             {
                 ErrorText.Text = "Lütfen Bir Birim Seçiniz";
             }
@@ -65,8 +67,7 @@ namespace UserControls.TopPanel.Cost
             }
             else
             {
-                ICostDal costDal = new EfCostDal();
-                costDal.Add(new Entities.Concrete.Cost
+                _costDal.Add(new Entities.Concrete.Cost
                 {
                     Name = NameText.Text,
                     UnitId = (int)_unitId,
@@ -95,16 +96,9 @@ namespace UserControls.TopPanel.Cost
 
         private void UnitPriceText_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            if (UnitPriceText.Text.Contains(","))
-            {
-                Regex regex = new Regex("[^0-9]");
-                e.Handled = regex.IsMatch(e.Text);
-            }
-            else
-            {
-                Regex regex = new Regex("[^0-9,]");
-                e.Handled = regex.IsMatch(e.Text);
-            }
+            Regex regex = new Regex("[^0-9]");
+            e.Handled = regex.IsMatch(e.Text);
+
         }
 
         private void UnitPriceText_OnTextChanged(object sender, TextChangedEventArgs e)

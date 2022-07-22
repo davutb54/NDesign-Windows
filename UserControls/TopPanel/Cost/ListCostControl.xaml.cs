@@ -233,12 +233,25 @@ namespace UserControls.TopPanel.Cost
                     Style = FindResource("UpdateButton") as Style,
                     Margin = new Thickness(0, 1, 0, 1)
                 };
+                updateButton.Click += (_, _) =>
+                {
+                    UpdateCostControl control = new UpdateCostControl
+                    {
+                        Cost = cost
+                    };
+
+                    Grid parent = (Parent as Grid);
+                    parent.Children.Clear();
+                    parent.Children.Add(control);
+                };
                 stackPanel.Children.Add(updateButton);
 
                 Grid.SetColumn(stackPanel,4);
                 grid.Children.Add(stackPanel);
 
                 ListView.Items.Add(grid);
+
+                index++;
             }
         }
     }
